@@ -1,0 +1,41 @@
+.nice-select .list {
+	box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+.get_adv {
+	margin-top: 3.9rem;
+	padding-top: 4rem;
+	border-top: 1px solid #E4E8F3;
+	font-weight: 700;
+	font-size: 1.6rem;
+	line-height: 2.0rem;
+}
+
+.get_adv__title {
+	margin-bottom: 2.8rem;
+}
+
+.get_adv__item {
+	display: flex;
+	align-items: center;
+}
+
+.get_adv__item + .get_adv__item {
+	margin-top: 1.6rem;
+}
+
+.get_adv__item svg {
+	width: 1.5rem;
+	margin-right: 1.8rem;
+}
+
+.get_adv__btn {
+	margin-top: 4.2rem;
+}
+
+.new-ad__item-subtitle {
+	margin-top: -1.9rem;
+	margin-bottom: 3.2rem;
+	font-size: 1.6rem;
+	line-height: 1.9rem;
+}

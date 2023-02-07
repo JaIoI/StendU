@@ -2102,6 +2102,7 @@
 	font-weight: 700;
 	font-size: 1.6rem;
 	line-height: 1;
+	user-select: none;
 }
 
 .new-ad__checkbox-label>input {
