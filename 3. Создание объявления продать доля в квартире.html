@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>1. StendU | Создание объявления | продать жилую квартиру</title>
+	<title>3. StendU | Создание объявления | продать доля в квартире</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/nice-select.css">
 	<link rel="stylesheet" href="css/style.min.css">
@@ -428,7 +428,7 @@
 										<p class="new-ad__category-sub-title">
 											<span class="mobile">Продам</span>
 											<span class="mobile">Жилая</span>
-											<span>Квартиры</span>
+											<span>Доля в квартире</span>
 										</p>
 									</div>
 									<button type="button" class="new-ad__category-reset-btn desktop">Другая категория</button>
@@ -464,9 +464,27 @@
 							<h2 class="new-ad__item-title">Об объекте</h2>
 							<div class="new-ad__item-content">
 								<div class="new-ad__flex-33">
+									<p class="new-ad__label-name">Вид:</p>
+									<div class="new-ad__input-box">
+										<select>
+											<option>Квартира</option>
+											<option>Не квартира</option>
+										</select>
+									</div>
+								</div>
+								<div class="new-ad__flex-33">
 									<p class="new-ad__label-name">Кадастровый номер</p>
 									<div class="new-ad__input-box">
 										<input type="text">
+									</div>
+								</div>
+								<div class="new-ad__flex-33">
+									<p class="new-ad__label-name">Размер доли*</p>
+									<div class="new-ad__input-box">
+										<select>
+											<option>3</option>
+											<option>4</option>
+										</select>
 									</div>
 								</div>
 								<div class="new-ad__flex-33">
@@ -491,6 +509,15 @@
 									</div>
 								</div>
 								<div class="new-ad__flex-33">
+									<p class="new-ad__label-name">Год постройки</p>
+									<div class="new-ad__input-box">
+										<select>
+											<option>1999</option>
+											<option>2023</option>
+										</select>
+									</div>
+								</div>
+								<div class="new-ad__flex-33">
 									<p class="new-ad__label-name">Материал дома</p>
 									<div class="new-ad__input-box">
 										<select>
@@ -499,19 +526,32 @@
 										</select>
 									</div>
 								</div>
+								<div class="new-ad__flex-33 new-ad__checkbox-box">
+									<label class="new-ad__checkbox-label active">
+										<input type="checkbox" checked>
+										<span class="new-ad__checkbox-icon">
+											<svg width="19" height="15" viewBox="0 0 19 15" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path d="M2 8.875L6.09091 13L17 2" stroke="#292D32" stroke-width="2.2"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</span>
+										<span>Пентхаус</span>
+									</label>
+								</div>
 							</div>
 						</div>
 						<div class="new-ad__form-item">
 							<h2 class="new-ad__item-title">Площадь</h2>
 							<div class="new-ad__item-content">
 								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Жилая площадь</p>
+									<p class="new-ad__label-name">Общая площадь*</p>
 									<div class="new-ad__input-box">
 										<input type="text">
 									</div>
 								</div>
 								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Общая площадь*</p>
+									<p class="new-ad__label-name">Жилая площадь</p>
 									<div class="new-ad__input-box">
 										<input type="text">
 									</div>
@@ -522,6 +562,12 @@
 										<input type="text">
 									</div>
 								</div>
+								<div class="new-ad__flex-50">
+									<p class="new-ad__label-name">Площадь комнат</p>
+									<div class="new-ad__input-box">
+										<input type="text" placeholder="+ для обозначения смежных комнат, -раздельных: 55+10-25">
+									</div>
+								</div>
 							</div>
 						</div>
 						<div class="parameters-ad new-ad__form-item">
@@ -529,8 +575,6 @@
 							<div class="new-ad__item-content">
 								<div class="new-ad__flex-33">
 									<p class="new-ad__label-name">Количество балконов</p>
-
-
 									<div class="new-ad__input-box">
 										<select>
 											<option>3</option>
@@ -571,6 +615,15 @@
 										<select>
 											<option>3</option>
 											<option>1</option>
+										</select>
+									</div>
+								</div>
+								<div class="new-ad__flex-33">
+									<p class="new-ad__label-name">Телефон</p>
+									<div class="new-ad__input-box">
+										<select>
+											<option>Ecть</option>
+											<option>Нет</option>
 										</select>
 									</div>
 								</div>
@@ -754,10 +807,23 @@
 							<h2 class="new-ad__item-title">Цена и условия сделки</h2>
 							<div class="new-ad__item-content">
 								<div class="new-ad__flex-50">
-									<p class="new-ad__label-name">Цена*</p>
+									<p class="new-ad__label-name">Цена</p>
 									<label class="price-ad__label new-ad__input-box">
 										<input type="number">
 										<span class="price-ad__price">₽</span>
+									</label>
+								</div>
+								<div class="new-ad__flex-50 new-ad__checkbox-box">
+									<label class="new-ad__checkbox-label active">
+										<input type="checkbox" checked>
+										<span class="new-ad__checkbox-icon">
+											<svg width="19" height="15" viewBox="0 0 19 15" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path d="M2 8.875L6.09091 13L17 2" stroke="#292D32" stroke-width="2.2"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</span>
+										<span>Возможна ипотека</span>
 									</label>
 								</div>
 								<div class="new-ad__flex-50">
@@ -766,6 +832,15 @@
 										<select>
 											<option>Свободная</option>
 											<option>Не свободная</option>
+										</select>
+									</div>
+								</div>
+								<div class="new-ad__flex-50">
+									<p class="new-ad__label-name">Бонус к агенту</p>
+									<div class="new-ad__input-box">
+										<select>
+											<option>Нет</option>
+											<option>Да</option>
 										</select>
 									</div>
 								</div>

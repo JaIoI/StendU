@@ -17,7 +17,7 @@
 
 .get_adv__item {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .get_adv__item + .get_adv__item {
@@ -25,7 +25,9 @@
 }
 
 .get_adv__item svg {
+	display: block;
 	width: 1.5rem;
+	margin-top: 0.5rem;
 	margin-right: 1.8rem;
 }
 
@@ -38,4 +40,33 @@
 	margin-bottom: 3.2rem;
 	font-size: 1.6rem;
 	line-height: 1.9rem;
+}
+
+@media (max-width: 48em) {
+	.get_adv {
+		font-size: 3.6rem;
+		line-height: 4.5rem;
+	}
+
+	.get_adv__item svg {
+		width: 4.5rem;
+		margin-top: 2rem;
+	}
+
+	.get_adv__item + .get_adv__item {
+		margin-top: 3rem;
+	}
+
+	.get_adv__btn {
+		justify-content: center;
+		width: 100%;
+		margin-top: 7rem;
+	}
+
+	.new-ad__item-subtitle {
+		margin-top: -3rem;
+		margin-bottom: 3.2rem;
+		font-size: 3rem;
+		line-height: 3.9rem;
+	}
 }
