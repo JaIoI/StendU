@@ -4,17 +4,18 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>1. StendU | Создание объявления | продать жилую квартиру</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>1.продать_жилое_квартира</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/nice-select.css">
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/add01022023.css">
+	<link rel="stylesheet" href="css/add.css">
+	<link rel="stylesheet" href="css/add2023.css">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
 </head>
 
 <body>
-
 	<header class="header">
 		<div class="container">
 			<div class="header__top">
@@ -392,295 +393,338 @@
 		</div>
 	</header>
 
-	<div class="inner inner--hidden inner--services-card"></div>
-
-	<main class="main main--hidden">
-		<section class="new-ad">
+	<main class="main">
+		<section class="announcement">
 			<div class="container">
-				<h2 class="new-ad__title">Создание объявления</h2>
-				<div class="new-ad__content">
-					<form class="new-ad__form">
-						<div class="new-ad__category-box new-ad__form-item">
-							<div class="new-ad__category-content">
-								<div class="new-ad__category-title-box">
-									<h3 class="new-ad__item-title">Категория</h3>
-									<button type="button" class="new-ad__category-reset-btn mobile">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path d="M12 20H21" stroke="white" stroke-width="2" stroke-linecap="round"
-												stroke-linejoin="round" />
-											<path
-												d="M16.5 3.50023C16.8978 3.1024 17.4374 2.87891 18 2.87891C18.2786 2.87891 18.5544 2.93378 18.8118 3.04038C19.0692 3.14699 19.303 3.30324 19.5 3.50023C19.697 3.69721 19.8532 3.93106 19.9598 4.18843C20.0665 4.4458 20.1213 4.72165 20.1213 5.00023C20.1213 5.2788 20.0665 5.55465 19.9598 5.81202C19.8532 6.06939 19.697 6.30324 19.5 6.50023L7 19.0002L3 20.0002L4 16.0002L16.5 3.50023Z"
-												stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-										</svg>
+				<div class="announcement-title">Создание объявления</div>
+				<div class="announcement-wrap">
+					<div class="announcement-content">
+
+						<!-- Категория -->
+						<div class="announcement-content__block announcement-content__category">
+							<div class="announcement-content__title">Категория</div>
+							<div class="announcement-content__category-block">
+								<div class="announcement-content__category-name">
+									<div class="announcement-content__category-img">
+										<img src="images/announcement/category-3.svg" alt="">
+									</div>
+									<div class="announcement-content__category-text">
+										<ul class="announcement-content__category-list">
+											<li>
+												<a href="#">Недвижимость</a>
+											</li>
+											<li>
+												<a href="#">Продам</a>
+											</li>
+											<li>
+												<a href="#">Жилая</a>
+											</li>
+										</ul>
+										<div class="announcement-content__category-description">Квартира</div>
+									</div>
+								</div>
+								<a href="#" class="announcement-content__category-more">
+									<span>Другая категория</span>
+									<img src="images/announcement/edit-icon.svg" alt="">
+								</a>
+							</div>
+						</div>
+
+						<!-- Адрес -->
+						<div class="announcement-content__block announcement-content__place">
+							<div class="announcement-content__title">Адрес</div>
+							<div class="announcement-content__place-search">
+								<label class="wide">
+									<div class="announcement-label__title">Адрес <span>?</span></div>
+									<input type="search" placeholder="Начните вводить адрес, а потом выберите из списка">
+									<button class="announcement-content__place-search-btn">
+										<img src="images/announcement/search.svg" alt="">
 									</button>
-								</div>
-								<div class="new-ad__category">
-									<div class="new-ad__category-icon">
-										<img src="img/create_page/building-icon.svg" alt="">
-									</div>
-									<div class="new-ad__category-name-box">
-										<h3 class="new-ad__category-title">
-											<span>Недвижимость</span>
-											<span class="desktop">Продам</span>
-											<span class="desktop">Жилая</span>
-										</h3>
-										<p class="new-ad__category-sub-title">
-											<span class="mobile">Продам</span>
-											<span class="mobile">Жилая</span>
-											<span>Квартиры</span>
-										</p>
-									</div>
-									<button type="button" class="new-ad__category-reset-btn desktop">Другая категория</button>
-								</div>
+								</label>
 							</div>
+							<div class="announcement-content__place-map" id="announcement-place-map"></div>
 						</div>
-						<div class="map-ad new-ad__form-item">
-							<h2 class="new-ad__item-title">Адрес</h2>
-							<div class="new-ad__item-content">
-								<div class="new-ad__flex-full">
-									<p class="new-ad__label-name">
-										<span>Адрес</span>
-										<span class="new-ad__label-name-icon">?</span>
-									</p>
-									<label class="map-ad__search-label new-ad__input-box">
-										<input placeholder="Начните вводить адрес, а потом выберите из списка" type="text">
-										<svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M10.725 18.7424C15.6473 18.7424 19.6376 14.7707 19.6376 9.87121C19.6376 4.97178 15.6473 1 10.725 1C5.80278 1 1.8125 4.97178 1.8125 9.87121C1.8125 14.7707 5.80278 18.7424 10.725 18.7424Z"
-												stroke="#4067F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-											<path d="M21.5167 20.6098L19.6406 18.7422" stroke="#4067F0" stroke-width="2"
-												stroke-linecap="round" stroke-linejoin="round" />
-										</svg>
-									</label>
-								</div>
-								<div class="map-ad__map">
-									<img src="img/create_page/map.webp" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="about-object-ad new-ad__form-item">
-							<h2 class="new-ad__item-title">Об объекте</h2>
-							<div class="new-ad__item-content">
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Кадастровый номер</p>
-									<div class="new-ad__input-box">
-										<input type="text">
-									</div>
-								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Количество комнат*</p>
-									<div class="new-ad__input-box">
-										<select>
-											<option>3</option>
-											<option>4</option>
-										</select>
-									</div>
-								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Этаж*</p>
-									<div class="new-ad__input-box">
-										<input type="text">
-									</div>
-								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Этажей в доме*</p>
-									<div class="new-ad__input-box">
-										<input type="text">
-									</div>
-								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Материал дома</p>
-									<div class="new-ad__input-box">
-										<select>
-											<option>Кирпичный</option>
-											<option>Бетонный</option>
-										</select>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="new-ad__form-item">
-							<h2 class="new-ad__item-title">Площадь</h2>
-							<div class="new-ad__item-content">
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Жилая площадь</p>
-									<div class="new-ad__input-box">
-										<input type="text">
-									</div>
-								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Общая площадь*</p>
-									<div class="new-ad__input-box">
-										<input type="text">
-									</div>
-								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Площадь кухни</p>
-									<div class="new-ad__input-box">
-										<input type="text">
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="parameters-ad new-ad__form-item">
-							<h2 class="new-ad__item-title">Параметры</h2>
-							<div class="new-ad__item-content">
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Количество балконов</p>
 
+						<!-- Об объекте -->
+						<div class="announcement-content__block announcement-content__apartment">
+							<div class="announcement-content__title">Об объекте</div>
+							<div class="announcement-content__block-wrap grid">
+								<div class="col_33">
+									<label>
+										<div class="announcement-label__title">Кадастровый номер</div>
+										<input type="text">
+									</label>
+								</div>
 
-									<div class="new-ad__input-box">
-										<select>
-											<option>3</option>
-											<option>1</option>
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Количество комнат*</div>
+										<select name="" id="">
+											<option value="3">3</option>
+											<option value="2">2</option>
+											<option value="1">1</option>
+											<option value="4">4</option>
 										</select>
 									</div>
 								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Количество лоджий</p>
-									<div class="new-ad__input-box">
-										<select>
-											<option>3</option>
-											<option>1</option>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Этаж*</div>
+										<select name="" id="">
+											<option value="3">3</option>
+											<option value="2">2</option>
+											<option value="1">1</option>
+											<option value="4">4</option>
 										</select>
 									</div>
 								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Окна</p>
-									<div class="new-ad__input-box">
-										<select>
-											<option>Во двор</option>
-											<option>Не во двор</option>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Этажей в доме*</div>
+										<select name="" id="">
+											<option value="3">3</option>
+											<option value="2">2</option>
+											<option value="1">1</option>
+											<option value="4">4</option>
 										</select>
 									</div>
 								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Количество разделенных санузлов</p>
-									<div class="new-ad__input-box">
-										<select>
-											<option>3</option>
-											<option>1</option>
-										</select>
-									</div>
-								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Количество совмещенных санузлов</p>
-									<div class="new-ad__input-box">
-										<select>
-											<option>3</option>
-											<option>1</option>
-										</select>
-									</div>
-								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Ремонт</p>
-									<div class="new-ad__input-box">
-										<select>
-											<option>Косметический</option>
-											<option>Космический</option>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Материал дома</div>
+										<select name="" id="">
+											<option value="3">Кирпичный</option>
+											<option value="2">Кирпичный 2</option>
+											<option value="1">Кирпичный 3</option>
+											<option value="4">Кирпичный 4</option>
 										</select>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="new-ad__form-item">
-							<h2 class="new-ad__item-title">О здании</h2>
-							<div class="new-ad__item-content">
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">
-										<span>Название</span>
-									</p>
-									<label class="new-ad__input-box">
+
+						<!-- Площадь -->
+						<div class="announcement-content__block">
+							<div class="announcement-content__title">Площадь</div>
+							<div class="announcement-content__block-wrap grid">
+								<div class="col_33">
+									<label>
+										<div class="announcement-label__title">Жилая площадь</div>
 										<input type="text">
 									</label>
 								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">
-										<span>Серия дома</span>
-									</p>
-									<label class="new-ad__input-box">
+
+								<div class="col_33">
+									<label>
+										<div class="announcement-label__title">Общая площадь*</div>
 										<input type="text">
 									</label>
 								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Количество пассажирских лифтов</p>
-									<div class="new-ad__input-box">
-										<select>
-											<option>1</option>
-											<option>2</option>
-										</select>
-									</div>
-								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Количество грузовых лифтов</p>
-									<div class="new-ad__input-box">
-										<select>
-											<option>1</option>
-											<option>2</option>
-										</select>
-									</div>
-								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">
-										<span>Высота потолков</span>
-									</p>
-									<label class="new-ad__input-box">
+
+								<div class="col_33">
+									<label>
+										<div class="announcement-label__title">Площадь кухни</div>
 										<input type="text">
-									</label>
-								</div>
-								<div class="new-ad__flex-33">
-									<p class="new-ad__label-name">Парковка</p>
-									<div class="new-ad__input-box">
-										<select>
-											<option>Наземная</option>
-											<option>Подземная</option>
-										</select>
-									</div>
-								</div>
-								<div class="new-ad__flex-33 new-ad__checkbox-box">
-									<label class="new-ad__checkbox-label">
-										<input type="checkbox">
-										<span class="new-ad__checkbox-icon">
-											<svg width="19" height="15" viewBox="0 0 19 15" fill="none"
-												xmlns="http://www.w3.org/2000/svg">
-												<path d="M2 8.875L6.09091 13L17 2" stroke="#292D32" stroke-width="2.2"
-													stroke-linecap="round" stroke-linejoin="round" />
-											</svg>
-										</span>
-										<span>Мусоропровод</span>
 									</label>
 								</div>
 							</div>
 						</div>
-						<div class="photo-ad new-ad__form-item">
-							<h2 class="new-ad__item-title">О собственнике</h2>
-							<div class="new-ad__item-content">
-								<div class="new-ad__flex-full">
-									<p class="new-ad__label-name">
-										<span>Фотографии</span>
-									</p>
-									<ul class="photo-ad__photo-list">
-										<li class="photo-ad__photo-item">
-											<img src="img/create_page/photo-ad-img1.webp" alt="">
-											<button class="photo-ad__del"></button>
-										</li>
-										<li class="photo-ad__photo-item">
-											<img src="img/create_page/photo-ad-img2.webp" alt="">
-											<button class="photo-ad__del"></button>
-										</li>
-										<li class="photo-ad__photo-item">
-											<img src="img/create_page/photo-ad-img3.webp" alt="">
-											<button class="photo-ad__del"></button>
-										</li>
-										<li class="photo-ad__photo-item">
-											<img src="img/create_page/photo-ad-new-photo.webp" alt="">
-											<label class="photo-ad__label">
-												<input type="file">
-											</label>
-										</li>
-									</ul>
+
+						<!-- Параметры -->
+						<div class="announcement-content__block">
+							<div class="announcement-content__title">Параметры</div>
+							<div class="announcement-content__block-wrap grid">
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Количество балконов</div>
+										<select name="" id="">
+											<option value="3">3</option>
+											<option value="2">2</option>
+											<option value="1">1</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Количество лоджий</div>
+										<select name="" id="">
+											<option value="3">3</option>
+											<option value="2">2</option>
+											<option value="1">1</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Окна</div>
+										<select name="" id="">
+											<option value="3">Во двор</option>
+											<option value="2">Во двор 2</option>
+											<option value="1">Во двор 1</option>
+											<option value="4">Во двор 4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Количество разделенных санузлов</div>
+										<select name="" id="">
+											<option value="3">3</option>
+											<option value="2">2</option>
+											<option value="1">1</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Количество совмещенных санузлов</div>
+										<select name="" id="">
+											<option value="3">3</option>
+											<option value="2">2</option>
+											<option value="1">1</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Ремонт</div>
+										<select name="" id="">
+											<option value="3">Косметический</option>
+											<option value="2">Косметический 2</option>
+											<option value="1">Косметический 1</option>
+											<option value="4">Косметический 4</option>
+										</select>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<!-- О здании -->
+						<div class="announcement-content__block">
+							<div class="announcement-content__title">О здании</div>
+							<div class="announcement-content__block-wrap grid">
+								<div class="col_33">
+									<label>
+										<div class="announcement-label__title">Название</div>
+										<input type="text">
+									</label>
+								</div>
+
+								<div class="col_33">
+									<label>
+										<div class="announcement-label__title">Серия дома</div>
+										<input type="text">
+									</label>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Количество пассажирских лифтов</div>
+										<select name="" id="">
+											<option value="1">1</option>
+											<option value="3">3</option>
+											<option value="2">2</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Количество грузовых лифтов</div>
+										<select name="" id="">
+											<option value="3">3</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col_33">
+									<label>
+										<div class="announcement-label__title">Высота потолков</div>
+										<input type="text">
+									</label>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Парковка</div>
+										<select name="" id="">
+											<option value="3">Наземная</option>
+											<option value="2">Наземная 2</option>
+											<option value="1">Наземная 1</option>
+											<option value="4">Наземная 4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col_33">
+									<label class="label-checkbox narrow">
+										<input type="checkbox" class="visually-hidden" checked>
+										<span></span>
+										<div>Мусоропровод</div>
+									</label>
+								</div>
+
+							</div>
+						</div>
+
+						<!-- Внешний вид -->
+						<div class="announcement-content__block announcement-content__appearance appearance-apartment">
+							<div class="announcement-content__title">Внешний вид</div>
+							<div class="announcement-content__appearance-block">
+								<div class="announcement-label__title">Фотографии</div>
+								<div class="announcement-content__appearance-photos-wrap">
+									<div class="announcement-content__appearance-photos">
+										<div class="announcement-content__appearance-photo appearance-photo-main"
+											data-appearance-photo="1">
+											<div class="announcement-content__appearance-photo-img">
+												<img src="images/announcement/appearance-photo.png" alt="">
+											</div>
+											<div class="announcement-content__appearance-photo-remove"
+												data-appearancePhotoRemove="1">
+												<img src="images/announcement/appearance-photo-delete.svg" alt="">
+											</div>
+										</div>
+
+										<div class="announcement-content__appearance-photo" data-appearance-photo="2">
+											<div class="announcement-content__appearance-photo-img">
+												<img src="images/announcement/appearance-photo1.png" alt="">
+											</div>
+											<div class="announcement-content__appearance-photo-remove"
+												data-appearancePhotoRemove="2">
+												<img src="images/announcement/appearance-photo-delete.svg" alt="">
+											</div>
+										</div>
+
+										<div class="announcement-content__appearance-photo" data-appearance-photo="3">
+											<div class="announcement-content__appearance-photo-img">
+												<img src="images/announcement/appearance-photo2.png" alt="">
+											</div>
+											<div class="announcement-content__appearance-photo-remove"
+												data-appearancePhotoRemove="3">
+												<img src="images/announcement/appearance-photo-delete.svg" alt="">
+											</div>
+										</div>
+									</div>
+									<label>
+										<input type="file" hidden class="announcement-content__appearance-photo-input">
+									</label>
 								</div>
 							</div>
 							<div class="get_adv">
@@ -710,181 +754,161 @@
 									</div>
 									<span>Вашему объявлению будет добавлен яркий значок “Проверено Росреестром”, вызывающий больше доверия</span>
 								</div>
-								<button type="button" class="get_adv__btn new-ad__footer-btn btn-blue">Получить</button>
+								<button type="button" class="get_adv__btn btn-blue">Получить</button>
 							</div>
 						</div>
-						<div class="new-ad__form-item">
-							<h2 class="new-ad__item-title">Видео</h2>
-							<div class="new-ad__item-content">
-								<div class="new-ad__flex-50">
-									<p class="new-ad__label-name">
-										<span>Добавьте ссылку на видеоролик об объекте</span>
-										<span class="new-ad__label-name-icon">?</span>
-									</p>
-									<label class="map-ad__search-label new-ad__input-box">
-										<input type="text">
+
+						<!-- Видео -->
+						<div class="announcement-content__block announcement-content__video">
+							<div class="announcement-content__title">Видео</div>
+							<div class="grid">
+								<div class="col_50">
+									<label>
+										<div class="announcement-label__title">Добавьте ссылку на видеоролик об объекте <span>?</span></div>
+										<input type="search">
 									</label>
 								</div>
 							</div>
 						</div>
-						<div class="new-ad__form-item">
-							<h2 class="new-ad__item-title">Заголовок объявления для ТОП и Премиум объявлений</h2>
-							<h4 class="new-ad__item-subtitle">Для ТОП и Премиум объявлений</h4>
-							<div class="new-ad__item-content">
-								<div class="new-ad__flex-full">
-									<label class="new-ad__textarea-box">
-										<textarea
-											placeholder="Заголовок объявления 33 символа"></textarea>
-									</label>
-								</div>
+
+						<!-- Заголовок объявления для ТОП и Премиум объявлений -->
+						<div class="announcement-content__block">
+							<div class="announcement-content__title">Заголовок объявления для ТОП и Премиум объявлений</div>
+							<div class="announcement-content__subtitle">Для ТОП и Премиум объявлений</div>
+							<label class="wide">
+								<textarea placeholder="Заголовок объявления 33 символа"></textarea>
+							</label>
+						</div>
+
+						<!-- Описание -->
+						<div class="announcement-content__block announcement-content__description">
+							<div class="announcement-content__title">Описание</div>
+							<div class="announcement-content__block-wrap">
+								<label class="wide">
+									<textarea
+										placeholder="Пожалуйста, не пишите требования, которые ограничивают арендаторов.
+Например, по их национальности или полу."></textarea>
+								</label>
 							</div>
 						</div>
-						<div class="desc-ad new-ad__form-item">
-							<h2 class="new-ad__item-title">Описание</h2>
-							<div class="new-ad__item-content">
-								<div class="new-ad__flex-full">
-									<label class="new-ad__textarea-box">
-										<textarea
-											placeholder="Пожалуйста, не пишите требования, которые ограничивают арендаторов.	Например, по их национальности или полу."></textarea>
+
+						<!-- Цена и условия сделки -->
+						<div class="announcement-content__block announcement-content__deal">
+							<div class="announcement-content__title">Цена и условия сделки</div>
+							<div class="announcement-content__block-wrap grid">
+								<div class="col_50">
+									<label>
+										<div class="announcement-label__title">Цена*</div>
+										<input type="text" value="300 000">
+										<span class="measure">₽</span>
 									</label>
 								</div>
-							</div>
-						</div>
-						<div class="price-ad new-ad__form-item">
-							<h2 class="new-ad__item-title">Цена и условия сделки</h2>
-							<div class="new-ad__item-content">
-								<div class="new-ad__flex-50">
-									<p class="new-ad__label-name">Цена*</p>
-									<label class="price-ad__label new-ad__input-box">
-										<input type="number">
-										<span class="price-ad__price">₽</span>
-									</label>
-								</div>
-								<div class="new-ad__flex-50">
-									<p class="new-ad__label-name">Тип продажи*</p>
-									<div class="new-ad__input-box">
-										<select>
-											<option>Свободная</option>
-											<option>Не свободная</option>
+
+								<div class="col_50">
+									<div class="label">
+										<div class="announcement-label__title">Тип продажи*</div>
+										<select name="" id="">
+											<option value="1">Свободная</option>
+											<option value="3">Свободная 3</option>
+											<option value="2">Свободная 2</option>
+											<option value="4">Свободная 4</option>
 										</select>
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="contacts-ad new-ad__form-item">
-							<h2 class="new-ad__item-title">Контакты</h2>
-							<div class="new-ad__item-content">
-								<div class="new-ad__flex-50">
-									<p class="new-ad__label-name">
-										<span>Основной (мобильный)*</span>
-									</p>
-									<label class="new-ad__input-box">
-										<input type="tel">
-									</label>
-								</div>
-								<div class="new-ad__flex-50">
-									<p class="new-ad__label-name">
-										<span>Номер телефона 2</span>
-									</p>
-									<label class="new-ad__input-box">
-										<input type="tel">
+
+								<div class="col_33">
+									<label class="label-checkbox narrow">
+										<input type="checkbox" class="visually-hidden" checked>
+										<span></span>
+										<div>Возможна ипотека</div>
 									</label>
 								</div>
 							</div>
 						</div>
-						<div class="new-ad__form-footer">
-							<div class="new-ad__footer-box">
-								<div class="new-ad__footer-icon desktop">
-									<img src="img/create_page/new-ad-footer-icon.svg" alt="">
+
+						<!-- Контакты -->
+						<div class="announcement-content__block announcement-content__contacts">
+							<div class="announcement-content__title">Контакты</div>
+							<div class="announcement-content__contacts-wrap announcement-contacts__wrap grid">
+								<div class="col_33">
+									<label>
+										<div class="announcement-label__title">Основной (мобильный)*</div>
+										<input type="tel">
+									</label>
 								</div>
-								<button class="new-ad__footer-link">Сохранить и выйти</button>
+
+								<div class="col_33">
+									<label>
+										<div class="announcement-label__title">Номер телефона 2</div>
+										<input type="tel">
+									</label>
+								</div>
 							</div>
-							<button class="new-ad__footer-btn">Продолжить</button>
 						</div>
-					</form>
-					<div class="new-ad__status-box desktop">
-						<div class="new-ad__status-bg">
-							<img class="top" src="img/create_page/status-bg-top.svg" alt="">
-							<img class="bottom" src="img/create_page/status-bg-bottom.svg" alt="">
+
+						<div class="announcement-content__block announcement-content__save">
+							<a href="#" class="announcement-content__save-btn announcement-save__btn">
+								<div class="announcement-content__save-btn-img">
+									<img src="images/announcement/save-icon.svg" alt="">
+								</div>
+								<div class="announcement-content__save-btn-text">Сохранить и выйти</div>
+							</a>
+							<a href="#" class="announcement-content__save-next">Продолжить</a>
 						</div>
-						<div class="new-ad__status-header-icon">
-							<span></span>
-							<img src="img/create_page/new-ad-status-header-icon.svg" alt="">
-						</div>
-						<ul class="new-ad__status-list">
-							<li class="new-ad__status-item active">
-								<div class="new-ad__status-item-icon">
-									<img src="img/create_page/new-ad-status-icon1.svg" alt="">
-									<svg class="ok" width="18" height="13" viewBox="0 0 18 13" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path d="M2 6.47713L6.44227 11L16 2" stroke="#4067F0" stroke-width="3"
-											stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								</div>
-								<p class="new-ad__status-item-name">Категория</p>
-							</li>
-							<li class="new-ad__status-item active">
-								<div class="new-ad__status-item-icon">
-									<img src="img/create_page/new-ad-status-icon2.svg" alt="">
-									<svg class="ok" width="18" height="13" viewBox="0 0 18 13" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path d="M2 6.47713L6.44227 11L16 2" stroke="#4067F0" stroke-width="3"
-											stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								</div>
-								<p class="new-ad__status-item-name">Адрес</p>
-							</li>
-							<li class="new-ad__status-item active">
-								<div class="new-ad__status-item-icon">
-									<img src="img/create_page/new-ad-status-icon3.svg" alt="">
-									<svg class="ok" width="18" height="13" viewBox="0 0 18 13" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path d="M2 6.47713L6.44227 11L16 2" stroke="#4067F0" stroke-width="3"
-											stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								</div>
-								<p class="new-ad__status-item-name">Внешний вид</p>
-							</li>
-							<li class="new-ad__status-item">
-								<div class="new-ad__status-item-icon">
-									<img src="img/create_page/new-ad-status-icon4.svg" alt="">
-									<svg class="ok" width="18" height="13" viewBox="0 0 18 13" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path d="M2 6.47713L6.44227 11L16 2" stroke="#4067F0" stroke-width="3"
-											stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								</div>
-								<p class="new-ad__status-item-name">О квартире</p>
-							</li>
-							<li class="new-ad__status-item">
-								<div class="new-ad__status-item-icon">
-									<img src="img/create_page/new-ad-status-icon5.svg" alt="">
-									<svg class="ok" width="18" height="13" viewBox="0 0 18 13" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path d="M2 6.47713L6.44227 11L16 2" stroke="#4067F0" stroke-width="3"
-											stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								</div>
-								<p class="new-ad__status-item-name">Контакты</p>
-							</li>
-						</ul>
-						<a href="" class="new-ad__status-footer">
-							<p class="new-ad__status-footer-text">
-								Столкнулись с проблемой?
-								<br><b>Задайте нам вопрос</b>
-							</p>
-							<div class="new-ad__status-footer-arrow">
-								<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M1.98138 1L7.32422 7L1.98138 13" stroke="#4067F0" stroke-width="2"
-										stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
+					</div>
+
+					<div class="announcement-stages">
+						<div class="announcement-stages__banner">
+							<div class="announcement-stages__banner-corner corner-left"></div>
+							<div class="announcement-stages__banner-corner corner-right"></div>
+							<div class="announcement-stages__banner-img">
+								<img src="images/announcement/stages-banner.svg" alt="">
 							</div>
-						</a>
+						</div>
+						<div class="announcement-stages__content">
+							<div class="announcement-stages__items">
+								<div class="announcement-stages__item active">
+									<div class="announcement-stages__item-img">
+										<img src="images/announcement/stage-1.svg" alt="">
+									</div>
+									<div class="announcement-stages__item-name">Категория</div>
+								</div>
+								<div class="announcement-stages__item active">
+									<div class="announcement-stages__item-img">
+										<img src="images/announcement/stage-2.svg" alt="">
+									</div>
+									<div class="announcement-stages__item-name">Параметры</div>
+								</div>
+								<div class="announcement-stages__item active">
+									<div class="announcement-stages__item-img">
+										<img src="images/announcement/stage-3.svg" alt="">
+									</div>
+									<div class="announcement-stages__item-name">Внешний вид</div>
+								</div>
+								<div class="announcement-stages__item">
+									<div class="announcement-stages__item-img">
+										<img src="images/announcement/stage-4.svg" alt="">
+									</div>
+									<div class="announcement-stages__item-name">Место сделки</div>
+								</div>
+								<div class="announcement-stages__item">
+									<div class="announcement-stages__item-img">
+										<img src="images/announcement/stage-5.svg" alt="">
+									</div>
+									<div class="announcement-stages__item-name">Контакты</div>
+								</div>
+							</div>
+							<a href="#" class="announcement-stages__link">
+								<div class="announcement-stages__link-suptitle">Столкнулись с проблемой?</div>
+								<div class="announcement-stages__link-title">Задайте нам вопрос</div>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
+
 	<footer class="footer">
 		<div class="container">
 			<ul class="footer__top">
@@ -1377,13 +1401,42 @@
 		</div>
 	</div>
 
-
 	<script src="js/jquery.min.js"></script>
 	<script src="js/swiper-bundle.min.js"></script>
-	<script src="js/jquery-ui.min.js"></script>
-	<script src="js/jquery.ui.touch-punch.min.js"></script>
 	<script src="js/jquery.nice-select.js"></script>
 	<script src="js/main.js"></script>
+
+	<script>
+		ymaps.ready(function () {
+			var myMap = new ymaps.Map('announcement-place-map', {
+				center: [55.728998, 37.506566],
+				zoom: 15,
+				controls: []
+			}, {
+				searchControlProvider: 'yandex#search'
+			}),
+
+				MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+					'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+				),
+
+				myPlacemark = new ymaps.Placemark([55.728998, 37.506566], {
+					hintContent: 'Собственный значок метки',
+					balloonContent: 'Это красивая метка'
+				}, {
+					iconLayout: 'default#image',
+					iconImageHref: 'images/announcement/map-mark.svg',
+					iconImageSize: [70, 96],
+					// Смещение левого верхнего угла иконки относительно
+					// её "ножки" (точки привязки).
+					iconImageOffset: [-35, -96]
+				});
+
+			myMap.geoObjects
+				.add(myPlacemark),
+				myMap.behaviors.disable('scrollZoom');
+		});
+	</script>
 </body>
 
 </html>
