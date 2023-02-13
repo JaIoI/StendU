@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<title>1.продать_жилое_квартира</title>
+	<title>2.продать_жилое_комната</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/nice-select.css">
 	<link rel="stylesheet" href="css/style.min.css">
@@ -420,7 +420,7 @@
 												<a href="#">Жилая</a>
 											</li>
 										</ul>
-										<div class="announcement-content__category-description">Квартира</div>
+										<div class="announcement-content__category-description">Комната</div>
 									</div>
 								</div>
 								<a href="#" class="announcement-content__category-more">
@@ -470,6 +470,18 @@
 
 								<div class="col_33">
 									<div class="label">
+										<div class="announcement-label__title">Количество комнат в прожажу*</div>
+										<select name="" id="">
+											<option value="3">3</option>
+											<option value="2">2</option>
+											<option value="1">1</option>
+											<option value="4">4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
 										<div class="announcement-label__title">Этаж*</div>
 										<select name="" id="">
 											<option value="3">3</option>
@@ -488,6 +500,17 @@
 											<option value="2">2</option>
 											<option value="1">1</option>
 											<option value="4">4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Год постройки</div>
+										<select name="" id="">
+											<option value="1999">1999</option>
+											<option value="1999">1999</option>
+											<option value="1999">1999</option>
 										</select>
 									</div>
 								</div>
@@ -528,6 +551,13 @@
 									<label>
 										<div class="announcement-label__title">Площадь кухни</div>
 										<input type="text">
+									</label>
+								</div>
+
+								<div class="col_50">
+									<label>
+										<div class="announcement-label__title">Площадь комнат</div>
+										<input type="text" placeholder="+ для обозначения смежных комнат, -раздельных: 55+10-25">
 									</label>
 								</div>
 							</div>
@@ -593,6 +623,18 @@
 											<option value="2">2</option>
 											<option value="1">1</option>
 											<option value="4">4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Телефон</div>
+										<select name="" id="">
+											<option value="3">Есть</option>
+											<option value="2">Есть 2</option>
+											<option value="1">Есть 1</option>
+											<option value="4">Есть 4</option>
 										</select>
 									</div>
 								</div>
@@ -686,7 +728,7 @@
 
 						<!-- Внешний вид -->
 						<div class="announcement-content__block announcement-content__appearance appearance-apartment">
-							<div class="announcement-content__title">Внешний вид</div>
+							<div class="announcement-content__title">О собственнике</div>
 							<div class="announcement-content__appearance-block">
 								<div class="announcement-label__title">Фотографии</div>
 								<div class="announcement-content__appearance-photos-wrap">
@@ -805,6 +847,14 @@
 								</div>
 
 								<div class="col_50">
+									<label class="label-checkbox narrow">
+										<input type="checkbox" class="visually-hidden" checked>
+										<span></span>
+										<div>Возможна ипотека</div>
+									</label>
+								</div>
+
+								<div class="col_50">
 									<div class="label">
 										<div class="announcement-label__title">Тип продажи*</div>
 										<select name="" id="">
@@ -816,12 +866,16 @@
 									</div>
 								</div>
 
-								<div class="col_33">
-									<label class="label-checkbox narrow">
-										<input type="checkbox" class="visually-hidden" checked>
-										<span></span>
-										<div>Возможна ипотека</div>
-									</label>
+								<div class="col_50">
+									<div class="label">
+										<div class="announcement-label__title">Бонус к агенту</div>
+										<select name="" id="">
+											<option value="1">Нет</option>
+											<option value="3">Нет 3</option>
+											<option value="2">Нет 2</option>
+											<option value="4">Нет 4</option>
+										</select>
+									</div>
 								</div>
 							</div>
 						</div>

@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<title>1.продать_жилое_квартира</title>
+	<title>18.продать_коммерческое_здание</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/nice-select.css">
 	<link rel="stylesheet" href="css/style.min.css">
@@ -417,10 +417,10 @@
 												<a href="#">Продам</a>
 											</li>
 											<li>
-												<a href="#">Жилая</a>
+												<a href="#">Коммерческая</a>
 											</li>
 										</ul>
-										<div class="announcement-content__category-description">Квартира</div>
+										<div class="announcement-content__category-description">Здание</div>
 									</div>
 								</div>
 								<a href="#" class="announcement-content__category-more">
@@ -449,6 +449,14 @@
 						<div class="announcement-content__block announcement-content__apartment">
 							<div class="announcement-content__title">Об объекте</div>
 							<div class="announcement-content__block-wrap grid">
+
+								<div class="col_33">
+									<label>
+										<div class="announcement-label__title">Номер налоговой</div>
+										<input type="text">
+									</label>
+								</div>
+
 								<div class="col_33">
 									<label>
 										<div class="announcement-label__title">Кадастровый номер</div>
@@ -458,51 +466,35 @@
 
 								<div class="col_33">
 									<div class="label">
-										<div class="announcement-label__title">Количество комнат*</div>
+										<div class="announcement-label__title">Возможное назначение</div>
 										<select name="" id="">
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="1">1</option>
-											<option value="4">4</option>
+											<option value="3">Бизнес-центр</option>
+											<option value="2">Бизнес-центр 2</option>
+											<option value="1">Бизнес-центр 3</option>
+											<option value="4">Бизнес-центр 4</option>
 										</select>
 									</div>
 								</div>
 
 								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Этаж*</div>
-										<select name="" id="">
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="1">1</option>
-											<option value="4">4</option>
-										</select>
-									</div>
+									<label>
+										<div class="announcement-label__title">Этажей в здании*</div>
+										<input type="text">
+									</label>
 								</div>
 
 								<div class="col_33">
 									<div class="label">
-										<div class="announcement-label__title">Этажей в доме*</div>
+										<div class="announcement-label__title">Год постройки</div>
 										<select name="" id="">
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="1">1</option>
-											<option value="4">4</option>
+											<option value="3">1999</option>
+											<option value="2">1999 2</option>
+											<option value="1">1999 3</option>
+											<option value="4">1999 4</option>
 										</select>
 									</div>
 								</div>
 
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Материал дома</div>
-										<select name="" id="">
-											<option value="3">Кирпичный</option>
-											<option value="2">Кирпичный 2</option>
-											<option value="1">Кирпичный 3</option>
-											<option value="4">Кирпичный 4</option>
-										</select>
-									</div>
-								</div>
 							</div>
 						</div>
 
@@ -512,21 +504,7 @@
 							<div class="announcement-content__block-wrap grid">
 								<div class="col_33">
 									<label>
-										<div class="announcement-label__title">Жилая площадь</div>
-										<input type="text">
-									</label>
-								</div>
-
-								<div class="col_33">
-									<label>
-										<div class="announcement-label__title">Общая площадь*</div>
-										<input type="text">
-									</label>
-								</div>
-
-								<div class="col_33">
-									<label>
-										<div class="announcement-label__title">Площадь кухни</div>
+										<div class="announcement-label__title">Площадь</div>
 										<input type="text">
 									</label>
 								</div>
@@ -539,74 +517,80 @@
 							<div class="announcement-content__block-wrap grid">
 								<div class="col_33">
 									<div class="label">
-										<div class="announcement-label__title">Количество балконов</div>
+										<div class="announcement-label__title">Высота потолков</div>
+										<input type="text">
+									</div>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Состояние</div>
 										<select name="" id="">
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="1">1</option>
-											<option value="4">4</option>
+											<option value="3">Офисная отделка</option>
+											<option value="2">Офисная отделка 2</option>
+											<option value="1">Офисная отделка 1</option>
+											<option value="4">Офисная отделка 4</option>
 										</select>
 									</div>
 								</div>
 
 								<div class="col_33">
 									<div class="label">
-										<div class="announcement-label__title">Количество лоджий</div>
+										<div class="announcement-label__title">Мебель</div>
 										<select name="" id="">
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="1">1</option>
-											<option value="4">4</option>
+											<option value="3">Есть</option>
+											<option value="2">Есть 2</option>
+											<option value="1">Есть 1</option>
+											<option value="4">Есть 4</option>
 										</select>
 									</div>
 								</div>
 
 								<div class="col_33">
 									<div class="label">
-										<div class="announcement-label__title">Окна</div>
+										<div class="announcement-label__title">Вход</div>
 										<select name="" id="">
-											<option value="3">Во двор</option>
-											<option value="2">Во двор 2</option>
-											<option value="1">Во двор 1</option>
-											<option value="4">Во двор 4</option>
+											<option value="3">Отдельный со двора</option>
+											<option value="2">Отдельный со двора 2</option>
+											<option value="1">Отдельный со двора 1</option>
+											<option value="4">Отдельный со двора 4</option>
 										</select>
 									</div>
 								</div>
 
 								<div class="col_33">
 									<div class="label">
-										<div class="announcement-label__title">Количество разделенных санузлов</div>
+										<div class="announcement-label__title">Планировка</div>
 										<select name="" id="">
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="1">1</option>
-											<option value="4">4</option>
+											<option value="3">Кабинетная</option>
+											<option value="2">Кабинетная 2</option>
+											<option value="1">Кабинетная 1</option>
+											<option value="4">Кабинетная 4</option>
 										</select>
 									</div>
 								</div>
 
 								<div class="col_33">
 									<div class="label">
-										<div class="announcement-label__title">Количество совмещенных санузлов</div>
-										<select name="" id="">
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="1">1</option>
-											<option value="4">4</option>
-										</select>
+										<div class="announcement-label__title">Количество мест</div>
+										<input type="text">
 									</div>
 								</div>
 
 								<div class="col_33">
 									<div class="label">
-										<div class="announcement-label__title">Ремонт</div>
-										<select name="" id="">
-											<option value="3">Косметический</option>
-											<option value="2">Косметический 2</option>
-											<option value="1">Косметический 1</option>
-											<option value="4">Косметический 4</option>
-										</select>
+										<div class="announcement-label__title">Стоимость места в месяц</div>
+										<input type="text" value="30 000">
+										<span class="measure">₽ / сутки</span>
 									</div>
+								</div>
+
+								<div class="col_33">
+									<label class="label-checkbox narrow">
+										<input type="checkbox" class="visually-hidden" checked>
+										<span></span>
+										<div>Бесплатная парковка</div>
+									</label>
 								</div>
 
 							</div>
@@ -615,78 +599,172 @@
 						<!-- О здании -->
 						<div class="announcement-content__block">
 							<div class="announcement-content__title">О здании</div>
-							<div class="announcement-content__block-wrap grid">
-								<div class="col_33">
-									<label>
-										<div class="announcement-label__title">Название</div>
-										<input type="text">
-									</label>
-								</div>
+							<div class="announcement-chapter">
+								<div class="grid">
 
-								<div class="col_33">
-									<label>
-										<div class="announcement-label__title">Серия дома</div>
-										<input type="text">
-									</label>
-								</div>
-
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Количество пассажирских лифтов</div>
-										<select name="" id="">
-											<option value="1">1</option>
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="4">4</option>
-										</select>
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Название</div>
+											<input type="text">
+										</div>
 									</div>
-								</div>
 
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Количество грузовых лифтов</div>
-										<select name="" id="">
-											<option value="3">3</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="4">4</option>
-										</select>
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Класс здания</div>
+											<select name="" id="">
+												<option value="3">А</option>
+												<option value="2">А 2</option>
+												<option value="1">А 1</option>
+												<option value="4">А 4</option>
+											</select>
+										</div>
 									</div>
-								</div>
 
-								<div class="col_33">
-									<label>
-										<div class="announcement-label__title">Высота потолков</div>
-										<input type="text">
-									</label>
-								</div>
-
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Парковка</div>
-										<select name="" id="">
-											<option value="3">Наземная</option>
-											<option value="2">Наземная 2</option>
-											<option value="1">Наземная 1</option>
-											<option value="4">Наземная 4</option>
-										</select>
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Линия домов</div>
+											<select name="" id="">
+												<option value="3">Первая</option>
+												<option value="2">Первая 2</option>
+												<option value="1">Первая 1</option>
+												<option value="4">Первая 4</option>
+											</select>
+										</div>
 									</div>
-								</div>
 
-								<div class="col_33">
-									<label class="label-checkbox narrow">
-										<input type="checkbox" class="visually-hidden" checked>
-										<span></span>
-										<div>Мусоропровод</div>
-									</label>
-								</div>
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Тип участка</div>
+											<select name="" id="">
+												<option value="3">В собственности</option>
+												<option value="2">В собственности 2</option>
+												<option value="1">В собственности 1</option>
+												<option value="4">В собственности 4</option>
+											</select>
+										</div>
+									</div>
 
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Категория здания</div>
+											<select name="" id="">
+												<option value="3">Действующее</option>
+												<option value="2">Действующее 2</option>
+												<option value="1">Действующее 1</option>
+												<option value="4">Действующее 4</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Девелопер</div>
+											<input type="text">
+										</div>
+									</div>
+
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Управляющая компания</div>
+											<input type="text">
+										</div>
+									</div>
+
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Вентиляция</div>
+											<select name="" id="">
+												<option value="3">Естественная</option>
+												<option value="2">Естественная 2</option>
+												<option value="1">Естественная 1</option>
+												<option value="4">Естественная 4</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Кондиционирование</div>
+											<select name="" id="">
+												<option value="3">Местное</option>
+												<option value="2">Местное 2</option>
+												<option value="1">Местное 1</option>
+												<option value="4">Местное 4</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Система пожаротушения</div>
+											<select name="" id="">
+												<option value="3">Гидрантная</option>
+												<option value="2">Гидрантная 2</option>
+												<option value="1">Гидрантная 1</option>
+												<option value="4">Гидрантная 4</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Площадь участка</div>
+											<div class="label__inner">
+												<input type="text">
+												<select name="" id="">
+													<option value="3">Га</option>
+													<option value="2">Га 2</option>
+													<option value="1">Га 3</option>
+													<option value="4">Га 4</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Количество лифтов</div>
+											<select name="" id="">
+												<option value="3">1</option>
+												<option value="2">2</option>
+												<option value="1">1</option>
+												<option value="4">4</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Количество траволаторов</div>
+											<select name="" id="">
+												<option value="3">1</option>
+												<option value="2">2</option>
+												<option value="1">1</option>
+												<option value="4">4</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Количество экскалаторов</div>
+											<select name="" id="">
+												<option value="3">1</option>
+												<option value="2">2</option>
+												<option value="1">1</option>
+												<option value="4">4</option>
+											</select>
+										</div>
+									</div>
+
+								</div>
 							</div>
 						</div>
 
-						<!-- Внешний вид -->
+						<!-- О собственнике -->
 						<div class="announcement-content__block announcement-content__appearance appearance-apartment">
-							<div class="announcement-content__title">Внешний вид</div>
+							<div class="announcement-content__title">О собственнике</div>
 							<div class="announcement-content__appearance-block">
 								<div class="announcement-label__title">Фотографии</div>
 								<div class="announcement-content__appearance-photos-wrap">
@@ -792,37 +870,51 @@
 							</div>
 						</div>
 
-						<!-- Цена и условия сделки -->
+						<!-- Условия сделки -->
 						<div class="announcement-content__block announcement-content__deal">
-							<div class="announcement-content__title">Цена и условия сделки</div>
+							<div class="announcement-content__title">Условия сделки</div>
 							<div class="announcement-content__block-wrap grid">
-								<div class="col_50">
+
+								<div class="col_33">
 									<label>
-										<div class="announcement-label__title">Цена*</div>
-										<input type="text" value="300 000">
-										<span class="measure">₽</span>
+										<div class="announcement-label__title">Цена</div>
+										<input type="text" value="100 000">
+										<span class="measure">₽ / сутки</span>
 									</label>
 								</div>
 
-								<div class="col_50">
+								<div class="col_33">
 									<div class="label">
-										<div class="announcement-label__title">Тип продажи*</div>
+										<div class="announcement-label__title">Налог</div>
 										<select name="" id="">
-											<option value="1">Свободная</option>
-											<option value="3">Свободная 3</option>
-											<option value="2">Свободная 2</option>
-											<option value="4">Свободная 4</option>
+											<option value="3">НДС включен</option>
+											<option value="2">НДС включен 2</option>
+											<option value="1">НДС включен 1</option>
+											<option value="4">НДС включен 4</option>
 										</select>
 									</div>
 								</div>
 
 								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Бонус к агенту</div>
+										<select name="" id="">
+											<option value="3">Нет</option>
+											<option value="2">Нет 2</option>
+											<option value="1">Нет 1</option>
+											<option value="4">Нет 4</option>
+										</select>
+									</div>
+								</div>
+									
+								<div class="col_33">
 									<label class="label-checkbox narrow">
 										<input type="checkbox" class="visually-hidden" checked>
 										<span></span>
-										<div>Возможна ипотека</div>
+										<div>Переуступка прав аренды</div>
 									</label>
 								</div>
+
 							</div>
 						</div>
 

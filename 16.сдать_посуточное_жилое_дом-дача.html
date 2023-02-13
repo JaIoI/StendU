@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	<title>1.продать_жилое_квартира</title>
+	<title>16.сдать_посуточное_жилое_дом-дача</title>
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/nice-select.css">
 	<link rel="stylesheet" href="css/style.min.css">
@@ -414,13 +414,13 @@
 												<a href="#">Недвижимость</a>
 											</li>
 											<li>
-												<a href="#">Продам</a>
+												<a href="#">Сдам посуточно</a>
 											</li>
 											<li>
 												<a href="#">Жилая</a>
 											</li>
 										</ul>
-										<div class="announcement-content__category-description">Квартира</div>
+										<div class="announcement-content__category-description">Дом/ дача</div>
 									</div>
 								</div>
 								<a href="#" class="announcement-content__category-more">
@@ -449,6 +449,7 @@
 						<div class="announcement-content__block announcement-content__apartment">
 							<div class="announcement-content__title">Об объекте</div>
 							<div class="announcement-content__block-wrap grid">
+
 								<div class="col_33">
 									<label>
 										<div class="announcement-label__title">Кадастровый номер</div>
@@ -458,7 +459,7 @@
 
 								<div class="col_33">
 									<div class="label">
-										<div class="announcement-label__title">Количество комнат*</div>
+										<div class="announcement-label__title">Количество спален</div>
 										<select name="" id="">
 											<option value="3">3</option>
 											<option value="2">2</option>
@@ -470,7 +471,7 @@
 
 								<div class="col_33">
 									<div class="label">
-										<div class="announcement-label__title">Этаж*</div>
+										<div class="announcement-label__title">Количество спальных мест</div>
 										<select name="" id="">
 											<option value="3">3</option>
 											<option value="2">2</option>
@@ -494,7 +495,19 @@
 
 								<div class="col_33">
 									<div class="label">
-										<div class="announcement-label__title">Материал дома</div>
+										<div class="announcement-label__title">Год постройки</div>
+										<select name="" id="">
+											<option value="3">1999</option>
+											<option value="2">1999 2</option>
+											<option value="1">1999 3</option>
+											<option value="4">1999 4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col_33">
+									<div class="label">
+										<div class="announcement-label__title">Материал постройки</div>
 										<select name="" id="">
 											<option value="3">Кирпичный</option>
 											<option value="2">Кирпичный 2</option>
@@ -503,6 +516,15 @@
 										</select>
 									</div>
 								</div>
+
+								<div class="col_33">
+									<label class="label-checkbox narrow">
+										<input type="checkbox" class="visually-hidden" checked>
+										<span></span>
+										<div>Сдается только часть дома</div>
+									</label>
+								</div>
+
 							</div>
 						</div>
 
@@ -512,181 +534,222 @@
 							<div class="announcement-content__block-wrap grid">
 								<div class="col_33">
 									<label>
-										<div class="announcement-label__title">Жилая площадь</div>
-										<input type="text">
-									</label>
-								</div>
-
-								<div class="col_33">
-									<label>
 										<div class="announcement-label__title">Общая площадь*</div>
 										<input type="text">
 									</label>
 								</div>
 
 								<div class="col_33">
-									<label>
-										<div class="announcement-label__title">Площадь кухни</div>
-										<input type="text">
-									</label>
+									<div class="label">
+										<div class="announcement-label__title">Площадь участка</div>
+										<div class="label__inner">
+											<input type="text">
+											<select name="" id="">
+												<option value="3">Га</option>
+												<option value="2">Га 2</option>
+												<option value="1">Га 3</option>
+												<option value="4">Га 4</option>
+											</select>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 
-						<!-- Параметры -->
+						<!-- Коммуникации и удобства -->
 						<div class="announcement-content__block">
-							<div class="announcement-content__title">Параметры</div>
-							<div class="announcement-content__block-wrap grid">
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Количество балконов</div>
-										<select name="" id="">
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="1">1</option>
-											<option value="4">4</option>
-										</select>
+							<div class="announcement-content__title">Коммуникации и удобства</div>
+							<div class="announcement-chapter">
+								<div class="announcement-chapter__title">Коммуникации</div>
+								<div class="grid">
+
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden" checked>
+											<span></span>
+											<div>Можно с питомцами</div>
+										</label>
+									</div>
+
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Можно с детьми</div>
+										</label>
 									</div>
 								</div>
+							</div>
 
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Количество лоджий</div>
-										<select name="" id="">
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="1">1</option>
-											<option value="4">4</option>
-										</select>
+							<div class="announcement-chapter">
+								<div class="announcement-chapter__title">Удобства</div>
+								<div class="grid">
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden" checked>
+											<span></span>
+											<div>Кухонная мебель</div>
+										</label>
 									</div>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Мебель в комнатах</div>
+										</label>
+									</div>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Холодильник</div>
+										</label>
+									</div>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Стиральная машина</div>
+										</label>
+									</div>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Санузел в доме</div>
+										</label>
+									</div>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Санузел на улице</div>
+										</label>
+									</div>
+
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Количество санузлов</div>
+											<select name="" id="">
+												<option value="3">3</option>
+												<option value="2">2</option>
+												<option value="1">1</option>
+												<option value="4">4</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="col_33">
+										<div class="label">
+											<div class="announcement-label__title">Отопление</div>
+											<select name="" id="">
+												<option value="3">Центральное</option>
+												<option value="2">Центральное 2</option>
+												<option value="1">Центральное 1</option>
+												<option value="4">Центральное 4</option>
+											</select>
+										</div>
+									</div>
+
 								</div>
 
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Окна</div>
-										<select name="" id="">
-											<option value="3">Во двор</option>
-											<option value="2">Во двор 2</option>
-											<option value="1">Во двор 1</option>
-											<option value="4">Во двор 4</option>
-										</select>
+							</div>
+							<div class="announcement-chapter">
+								<div class="announcement-chapter__title">Дополнительные параметры</div>
+								<div class="grid">
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden" checked>
+											<span></span>
+											<div>Интернет</div>
+										</label>
 									</div>
-								</div>
-
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Количество разделенных санузлов</div>
-										<select name="" id="">
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="1">1</option>
-											<option value="4">4</option>
-										</select>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Телевизор</div>
+										</label>
 									</div>
-								</div>
-
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Количество совмещенных санузлов</div>
-										<select name="" id="">
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="1">1</option>
-											<option value="4">4</option>
-										</select>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Кондиционер</div>
+										</label>
 									</div>
-								</div>
-
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Ремонт</div>
-										<select name="" id="">
-											<option value="3">Косметический</option>
-											<option value="2">Косметический 2</option>
-											<option value="1">Косметический 1</option>
-											<option value="4">Косметический 4</option>
-										</select>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Посудомоечная машина</div>
+										</label>
 									</div>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden" checked>
+											<span></span>
+											<div>Телефон</div>
+										</label>
+									</div>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Ванна</div>
+										</label>
+									</div>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Душевая кабина</div>
+										</label>
+									</div>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Баня</div>
+										</label>
+									</div>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Гараж</div>
+										</label>
+									</div>
+									
+									<div class="col_25">
+										<label class="label-checkbox narrow">
+											<input type="checkbox" class="visually-hidden">
+											<span></span>
+											<div>Бассейн</div>
+										</label>
+									</div>
+									
 								</div>
 
 							</div>
 						</div>
 
-						<!-- О здании -->
-						<div class="announcement-content__block">
-							<div class="announcement-content__title">О здании</div>
-							<div class="announcement-content__block-wrap grid">
-								<div class="col_33">
-									<label>
-										<div class="announcement-label__title">Название</div>
-										<input type="text">
-									</label>
-								</div>
-
-								<div class="col_33">
-									<label>
-										<div class="announcement-label__title">Серия дома</div>
-										<input type="text">
-									</label>
-								</div>
-
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Количество пассажирских лифтов</div>
-										<select name="" id="">
-											<option value="1">1</option>
-											<option value="3">3</option>
-											<option value="2">2</option>
-											<option value="4">4</option>
-										</select>
-									</div>
-								</div>
-
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Количество грузовых лифтов</div>
-										<select name="" id="">
-											<option value="3">3</option>
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="4">4</option>
-										</select>
-									</div>
-								</div>
-
-								<div class="col_33">
-									<label>
-										<div class="announcement-label__title">Высота потолков</div>
-										<input type="text">
-									</label>
-								</div>
-
-								<div class="col_33">
-									<div class="label">
-										<div class="announcement-label__title">Парковка</div>
-										<select name="" id="">
-											<option value="3">Наземная</option>
-											<option value="2">Наземная 2</option>
-											<option value="1">Наземная 1</option>
-											<option value="4">Наземная 4</option>
-										</select>
-									</div>
-								</div>
-
-								<div class="col_33">
-									<label class="label-checkbox narrow">
-										<input type="checkbox" class="visually-hidden" checked>
-										<span></span>
-										<div>Мусоропровод</div>
-									</label>
-								</div>
-
-							</div>
-						</div>
-
-						<!-- Внешний вид -->
+						<!-- О собственнике -->
 						<div class="announcement-content__block announcement-content__appearance appearance-apartment">
-							<div class="announcement-content__title">Внешний вид</div>
+							<div class="announcement-content__title">О собственнике</div>
 							<div class="announcement-content__appearance-block">
 								<div class="announcement-label__title">Фотографии</div>
 								<div class="announcement-content__appearance-photos-wrap">
@@ -798,31 +861,20 @@
 							<div class="announcement-content__block-wrap grid">
 								<div class="col_50">
 									<label>
-										<div class="announcement-label__title">Цена*</div>
-										<input type="text" value="300 000">
-										<span class="measure">₽</span>
+										<div class="announcement-label__title">Цена за сутки</div>
+										<input type="text" value="30 000">
+										<span class="measure">₽ / месяц</span>
 									</label>
 								</div>
 
 								<div class="col_50">
 									<div class="label">
-										<div class="announcement-label__title">Тип продажи*</div>
-										<select name="" id="">
-											<option value="1">Свободная</option>
-											<option value="3">Свободная 3</option>
-											<option value="2">Свободная 2</option>
-											<option value="4">Свободная 4</option>
-										</select>
+										<div class="announcement-label__title">Залог</div>
+										<input type="text" value="30 000">
+										<span class="measure">₽ / сутки</span>
 									</div>
 								</div>
 
-								<div class="col_33">
-									<label class="label-checkbox narrow">
-										<input type="checkbox" class="visually-hidden" checked>
-										<span></span>
-										<div>Возможна ипотека</div>
-									</label>
-								</div>
 							</div>
 						</div>
 
