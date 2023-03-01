@@ -160,7 +160,11 @@
 
 .announcement-content__place-search {
 	margin-top: 2.9rem;
-	margin-bottom: 3.4rem;
+	margin-bottom: 0;
+}
+
+.announcement-content__place-search + * {
+	margin-top: 3.4rem;
 }
 
 .announcement-content__place label textarea,
@@ -337,7 +341,10 @@
 
 	.announcement-content__place-search {
 		margin-top: 5.1rem;
-		margin-bottom: 5.1rem;
+	}
+
+	.announcement-content__place-search + * {
+		margin-top: 5.1rem;
 	}
 
 	.announcement-content__place .announcement-label__title {
