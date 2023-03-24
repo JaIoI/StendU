@@ -977,5 +977,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 
+	$('.dropdown_btn').on('click', function(evt) {
+		evt.preventDefault();
+		let parent = $(this).closest('.announcement-chapter'); 
+		let dropdown = parent.find('.dropdown');
+		parent.toggleClass('announcement-chapter--open');
+		dropdown.slideToggle();
+	});
+
 
 });
