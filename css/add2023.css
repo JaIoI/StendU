@@ -407,7 +407,23 @@
 	margin-top: 2.5rem;
 }
 
+.dropdown_btn {
+	display: flex;
+	align-items: center;
+	align-self: flex-start;
+}
 
+.dropdown_btn svg {
+	display: block;
+	width: 1.7rem;
+	margin-left: 1.5rem;
+	margin-top: 0.3rem;
+	transition: transform 300ms;
+}
+
+.announcement-chapter--open .dropdown_btn svg {
+	transform: rotate(180deg);
+}
 
 @media (max-width: 48em) {
 	.btn {
