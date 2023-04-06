@@ -985,5 +985,11 @@ document.addEventListener('DOMContentLoaded', () => {
 		dropdown.slideToggle();
 	});
 
+	$('.modal__close, .close_modal_js').on('click', function (evt) {
+		evt.preventDefault();
+		$('html').removeClass('ofh');
+		$(this).closest(".modal").fadeOut('400');
+	});
+
 
 });
