@@ -985,10 +985,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		dropdown.slideToggle();
 	});
 
-	$('.modal__close, .close_modal_js').on('click', function (evt) {
+	$('.popup__close, .close_popup_js').on('click', function (evt) {
 		evt.preventDefault();
 		$('html').removeClass('ofh');
-		$(this).closest(".modal").fadeOut('400');
+		$(this).closest(".popup").fadeOut('400');
 	});
 
 
