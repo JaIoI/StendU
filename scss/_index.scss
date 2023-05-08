@@ -811,10 +811,18 @@
     margin-bottom: 6.2rem;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   &__title {
     margin-right: auto;
+  }
+
+  &__subtitle {
+    flex-basis: 100%;
+    order: 10;
+    margin-top: 0.8rem;
+    color: #8990AB;
   }
 
   &__select {
@@ -826,23 +834,6 @@
     background-color: #FFFFFF;
     border-radius: 20rem;
     margin-right: 2rem;
-
-    &::after {
-      content: "";
-      width: 1.5rem;
-      height: 0.9rem;
-      position: absolute;
-      top: 50%;
-      right: 2.2rem;
-      transform: translateY(-50%);
-      background-image: url(../images/selector-arrow-black.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-    
-    &--active::after {
-      transform: translateY(-50%) rotate(180deg);
-    }
 
     & + .announcements__format {
       margin-left: 3rem;
