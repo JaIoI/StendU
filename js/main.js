@@ -991,5 +991,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		$(this).closest(".popup").fadeOut('400');
 	});
 
+	$(".js-range-slider").ionRangeSlider();
 
 });

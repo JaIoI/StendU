@@ -895,6 +895,7 @@
     justify-content: center;
     align-items: center;
     transition: background-color 0.3s linear;
+    cursor: pointer;
 
     &:not(:last-child) {
       margin-right: 2rem;
