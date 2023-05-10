@@ -165,9 +165,9 @@ $('.announcements__btn--filter').on('click', function (e) {
 });
 
 $('.announcements__btn--sort').on('click', function (e) {
-	$('.main').addClass('main--sort');
-	$('html, body').animate({ scrollTop: $(".header").offset().top }, 700);
 	e.preventDefault();
+	$(this).siblings('.select').toggleClass('active');
+	
 });
 
 $('.form__select').on('click', function () {

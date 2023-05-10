@@ -814,6 +814,10 @@
     flex-wrap: wrap;
   }
 
+  &__content {
+    padding-top: 1rem;
+  }
+
   &__title {
     margin-right: auto;
   }
@@ -821,7 +825,7 @@
   &__subtitle {
     flex-basis: 100%;
     order: 10;
-    margin-top: 0.8rem;
+    margin-top: 1rem;
     color: #8990AB;
   }
 
@@ -919,6 +923,26 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
+  }
+
+  &__cat {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 9rem;
+    }
+
+    .title {
+      margin-bottom: 3.3rem;
+    }
+
+    > .btn {
+      flex-grow: 0;
+      align-self: flex-end;
+      margin-top: 7rem;
+    }
+
   }
 
   &__items {
