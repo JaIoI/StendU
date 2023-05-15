@@ -1657,6 +1657,10 @@
       background-size: 2.3rem 1.7rem;
       background-repeat: no-repeat;
       background-position: center;
+
+      &::after {
+        content: none;
+      }
     }
 
     &-prev {
@@ -1747,11 +1751,12 @@
 
         &__swiper-next,
         &__swiper-prev {
-          top: 26.1rem;
+          top: 28.6rem;
         }
 
         &__swiper-next {
-          right: 20.1rem;
+          left: auto;
+          right: 1.9rem;
         }
 
         &__swiper-prev {
@@ -2288,65 +2293,36 @@
     }
 
     &--transport {
-      padding: 5.2rem 5.6rem;
+      padding: 5.2rem 5.6rem 5.5rem;
 
       .card {
         
         &__description-title {
-          margin-bottom: 3.4rem;
+          margin-bottom: 2.8rem;
         }
 
         &__characteristics {
-          display: block;
-    
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 1.9rem 5rem;
+
           .card {
     
             &__characteristic {
-              display: inline-block;
-    
-              &:nth-child(4n + 1) {
-                width: 14.6rem;
-              }
-    
-              &:nth-child(4n + 2) {
-                width: 26rem;
-              }
-    
-              &:nth-child(4n + 3) {
-                width: 23.6rem;
-              }
-    
-              &:nth-child(4n) {
-                width: 15.4rem;
-                margin-right: 0;
-              }
-    
-              &:not(:last-child):not(:nth-last-child(2)) {
-                margin-bottom: 0;
-              }
-    
-              &:not(:last-child) {
-                margin-right: 2rem;
-              }
-            }
-    
-            &__characteristic-list {
-    
+              display: block;
+              width: auto;
+              margin: 0 !important;
             }
 
-            &__characteristic-item:not(:last-child) {
-              margin-bottom: 2.85rem;
-            }
-            
             &__key {
               font-size: 1.8rem;
+              line-height: 3.3rem;
               color: #9CA0AE;
-              margin-bottom: 0.7rem;
             }
-    
+            
             &__value {
               font-size: 2rem;
-              font-weight: bolder;
+              line-height: 3.3rem;
 
               &--blue {
                 color: #4067F0;
@@ -2365,6 +2341,7 @@
 
   &__description-title {
     font-size: 3.1rem;
+    line-height: 3.9rem;
     font-weight: 700;
     margin-bottom: 4.4rem;
   }
@@ -2426,7 +2403,7 @@
   }
 
   &__examination {
-    padding: 3.7rem 5.6rem 5rem;
+    padding: 3.7rem 5.4rem 4.9rem 5.7rem;
     border-radius: 3rem;
     background-color: #fff;
     margin-bottom: 5rem;
@@ -2453,7 +2430,7 @@
     }
 
   &__examination-items {
-    margin: 3.8rem 0 1.3rem;
+    margin: 3.9rem 0 1.1rem;
     width: 100%;
     order: 2;
     display: flex;
@@ -2461,8 +2438,8 @@
   }
 
   &__examination-item {
-    padding-left: 3.5rem;
-    margin-bottom: 2.5rem;
+    padding-left: 3.7rem;
+    margin-bottom: 2.7rem;
     font-size: 1.6rem;
     font-weight: 600;
     background-image: url(../images/examination-check.svg);
@@ -2544,7 +2521,7 @@
   }
   
   &__comment {
-    padding: 5.1rem 6rem 5.7rem;
+    padding: 6.1rem 9rem 5.7rem 5.5rem;
     border-radius: 3rem;
     background-color: #fff;
     margin-bottom: 4.9rem;
@@ -2553,17 +2530,17 @@
   &__comment-title {
     font-size: 3.1rem;
     font-weight: 700;
-    margin-bottom: 3.4rem;
+    margin-bottom: 4.8rem;
   }
 
   &__text {
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.6;
-    margin-bottom: 3.9rem;
+    margin-bottom: 3.6rem;
 
     p:not(:last-child) {
-      margin-bottom: 2.8rem;
+      margin-bottom: 2.9rem;
     }
   }
 
@@ -2578,7 +2555,7 @@
   }
 
   &__complectation {
-    padding: 5.3rem 5.6rem 4.7rem;
+    padding: 5.1rem 5.6rem 5rem 5.7rem;
     border-radius: 3rem;
     background-color: #fff;
     margin-bottom: 5rem;
@@ -2586,14 +2563,42 @@
 
   &__complectation-title {
     font-size: 3.1rem;
+    line-height: 3.9rem;
     font-weight: 700;
-    margin-bottom: 3.2rem;
+    margin-bottom: 3.3rem;
   }
 
   &__complectation-inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.1rem 2.2rem;
   }
 
+  &__complectation-group {
+    line-height: 3.3rem;
+
+    li {
+      display: flex;
+      flex-wrap: wrap;
+
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .prop {
+      width: 100%;
+      max-width: 20.3rem;
+      color: #9CA0AE;
+    }
+
+    .value_full {
+      margin-top: 0.4rem;
+      line-height: 3rem;
+    }
+  }
+
+  
   &__complectation-save {
     width: 40.4rem;
     margin-right: 2rem;
@@ -2601,8 +2606,9 @@
 
   &__complectation-subtitle {
     font-size: 2rem;
+    line-height: 3.3rem;
     font-weight: 700;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.7rem;
   }
 
   &__complectation-text {
@@ -2623,7 +2629,7 @@
 
   &__credit {
     position: relative;
-    padding: 5.8rem 5.5rem 7.6rem 5.8rem;
+    padding: 5.6rem 5.5rem 7.7rem 5.8rem;
     border-radius: 3rem;
     background-color: #fff;
     margin-bottom: 5rem;
@@ -2663,8 +2669,9 @@
   }
 
   &__credit-title {
-    margin: 4.9rem 0 0.6rem;
+    margin: 4.9rem 0 0.3rem;
     font-size: 2.6rem;
+    line-height: 3.3rem;
     font-weight: 700;
 
     span {
@@ -2677,8 +2684,9 @@
 
   &__credit-text {
     font-size: 1.6rem;
+    line-height: 3rem;
     color: #9CA0AE;
-    margin-bottom: 5.2rem;
+    margin-bottom: 4.8rem;
   }
 
   &__form {
@@ -2700,7 +2708,7 @@
     }
 
     .ui-slider {
-      margin-top: 3rem;
+      margin-top: 3.1rem;
       position: relative;
       width: 100%;
       background: #D5DBF0;
@@ -2761,7 +2769,7 @@
     }
 
     &--sum {
-      margin-bottom: 5.5rem;
+      margin-bottom: 5.6rem;
     }
 
     &--time {
@@ -2799,7 +2807,7 @@
   }
 
   &__form-value {
-    margin-top: 0.7rem;
+    margin-top: 0.9rem;
     font-size: 1.8rem;
     font-weight: 700;
 
@@ -2819,7 +2827,7 @@
 
   &__form-input {
     display: block;
-    width: 38.4rem;
+    width: 39.4rem;
     border-radius: 5rem;
     padding: 1.3rem 2.8rem;
     margin-bottom: 2rem;
@@ -2855,7 +2863,7 @@
     margin-top: 2.3rem;
     font-size: 1.4rem;
     font-weight: 500;
-    line-height: 1.55;
+    line-height: 1.6;
     color: #9CA0AE;
   }
 
@@ -3120,10 +3128,10 @@
   }
 
   &__address {
-    padding: 2.9rem 6rem 3.4rem 4.4rem;
+    padding: 2.9rem 6rem 3.4rem 3.9rem;
     border-radius: 3rem;
     background-color: #fff;
-    margin-bottom: 5.1rem;
+    margin-bottom: 7rem;
     display: flex;
     align-items: center;
 
@@ -3141,15 +3149,13 @@
   &__address-img {
     width: 7.6rem;
     height: 7.6rem;
-    margin-right: 1.2rem;
+    margin-right: 1.7rem;
   }
   
   &__address-text {
-    padding-top: 0.9rem;
-  }
-
-  &__address-text {
+    padding-top: 0.2rem;
     font-size: 2.2rem;
+    line-height: 3.2rem;
     font-weight: 700;
     margin-right: auto;
   }
