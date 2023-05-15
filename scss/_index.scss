@@ -5433,3 +5433,40 @@
     text-align: center;
   }
 }
+
+@media (max-width:48em) {
+  .card__complectation-group {
+
+    &:not(:last-child) {
+      margin-bottom: 4.4rem;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+
+    .prop {
+      max-width: 38rem;
+      font-size: 3rem;
+      line-height: 6rem;
+      margin-right: 1rem;
+    }
+
+    .value {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 40rem);
+      line-height: 6rem;
+
+      &_full {
+        width: 100%;
+        margin-top: 0.8rem;
+        line-height: 5.8rem;
+      }
+    }
+  }
+
+  .card__pagination {
+    bottom: 3rem;
+  }
+}

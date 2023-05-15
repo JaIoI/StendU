@@ -1993,7 +1993,7 @@
     &__description {
       padding: 7.4rem 4.6rem 12.8rem;
       border-radius: 5rem;
-      margin-bottom: 6.4rem;
+      margin-bottom: 6rem;
 
       
     &--property {
@@ -2291,7 +2291,8 @@
     }
 
     &__examination {
-      padding: 6rem 3.6rem;
+      margin-bottom: 5.9rem;
+      padding: 6rem 3.6rem 6.7rem;
       border-radius: 5rem;
     }
 
@@ -2343,7 +2344,7 @@
 
     &__examination-list {
       display: block;
-      margin-bottom: 5.5rem;
+      margin-bottom: 5.7rem;
     }
 
     &__examination-elem {
@@ -2370,20 +2371,21 @@
     }
 
     &__comment {
-      padding: 7.4rem 4.6rem 9.7rem;
+      padding: 6.1rem 4.6rem 10rem;
       border-radius: 4.7rem;
-      margin-bottom: 6.4rem;
+      margin-bottom: 6rem;
     }
 
     &__comment-title {
       font-size: 5.4rem;
-      margin-bottom: 4.4rem;
+      line-height: 9.4rem;
+      margin-bottom: 3.4rem;
     }
 
     &__text {
       font-size: 3.2rem;
-      line-height: 1.8;
-      margin-bottom: 6rem;
+      line-height: 5.8rem;
+      margin-bottom: 5.4rem;
 
       p:not(:last-child) {
         margin-bottom: 5.8rem;
@@ -2404,13 +2406,15 @@
     }
 
     &__complectation {
-      padding: 7rem 4.7rem 7.3rem;
+      padding: 5.8rem 4.7rem 6.7rem;
       border-radius: 5rem;
+      margin-bottom: 5.9rem;
     }
 
     &__complectation-title {
       font-size: 5.4rem;
-      margin-bottom: 5.1rem;
+      line-height: 9.4rem;
+      margin-bottom: 4.7rem;
     }
 
     &__complectation-inner {
@@ -2427,8 +2431,9 @@
     }
 
     &__complectation-subtitle {
-      font-size: 4rem;
-      margin-bottom: 1.6rem;
+      font-size: 3.2rem;
+      line-height: 150%;
+      margin-bottom: 2rem;
     }
 
     &__all-complectation {
@@ -2989,7 +2994,8 @@
 
     &__credit-title {
       font-size: 4.8rem;
-      margin: 9.4rem 0 0.9rem;
+      line-height: 6.7rem;
+      margin: 9rem 0 0.3rem;
 
       span {
         margin-left: 1.3rem;
@@ -2998,7 +3004,7 @@
     
     &__credit-text {
       font-size: 3.2rem;
-      line-height: 1.85;
+      line-height: 6rem;
       margin-bottom: 6.2rem;
     }
 
@@ -3013,7 +3019,7 @@
     &__cost-polzunok {
 
       .ui-slider {
-        margin-top: 6.2rem;
+        margin-top: 6.7rem;
         height: 0.6rem;
         
         .ui-slider-handle {
@@ -3039,6 +3045,8 @@
         }
         
         &__inner {
+          display: flex;
+          align-items: center;
           font-size: 3rem;
           margin-top: 1.1rem;
 
@@ -3050,7 +3058,7 @@
       }
 
       &--sum {
-        margin-bottom: 8.8rem;
+        margin-bottom: 9.5rem;
       }
 
       &--time {
@@ -3066,7 +3074,7 @@
     &__form-elem {
 
       &:not(:last-child) {
-        padding-right: 8.2rem;
+        padding-right: 7.6rem;
         margin-right: 7.8rem;
 
         &::after {
