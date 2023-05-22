@@ -146,11 +146,11 @@ $('.map-filter:not(map-filter__inner), .map-filter__close').on('click', function
 	e.preventDefault();
 });
 
-$('.header__application-add').on('click', function (e) {
-	$('body').addClass('body--active');
-	$(".announcement-modal").slideToggle();
-	e.preventDefault();
-});
+// $('.header__application-add').on('click', function (e) {
+// 	$('body').addClass('body--active');
+// 	$(".announcement-modal").slideToggle();
+// 	e.preventDefault();
+// });
 
 $('.announcement-modal:not(announcement-modal__inner), .announcement-modal__close').on('click', function (e) {
 	$('body').removeClass('body--active');
@@ -992,5 +992,26 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 
 	$(".js-range-slider").ionRangeSlider();
+
+
+	$('.modal-login-open').on('click', function(evt) {
+		evt.preventDefault();
+		$('html').addClass('ofh');
+		$('.modal-login').css('display', 'flex');
+	});
+
+	$('.modal__close').on('click', function(evt) {
+		evt.preventDefault();
+		$('html').removeClass('ofh');
+		$(this).closest('.modal').fadeOut('400');
+	});
+
+	$('.modal-registration__exit').on('click', function(evt) {
+		evt.preventDefault();
+		$('html').addClass('ofh');
+		$(this).closest('.modal').fadeOut('400');
+		$('.modal-login').css('display', 'flex');
+	});
+
 
 });
